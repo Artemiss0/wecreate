@@ -1,0 +1,11 @@
+/* Navigation style */
+.navbar{
+    background-color: #212529;
+    color: #f8f8f8;
+}
+.navbar ul li{
+    padding-right: 3em;
+}
+.navbar ul li a{
+    color: #f8f8f8;
+}
