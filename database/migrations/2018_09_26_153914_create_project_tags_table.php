@@ -16,6 +16,7 @@ class CreateProjectTagsTable extends Migration
         Schema::create('project_tags', function (Blueprint $table) {
             $table->increments('id');
             $table->string('projects_id');
+            $table->string('tags_id');
             $table->timestamps();
         });
     }

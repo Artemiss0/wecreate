@@ -15,6 +15,14 @@ class CreateUsersInformationTable extends Migration
     {
         Schema::create('users_information', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('profile_pic');
+            $table->string('occupation');
+            $table->string('introduction');
+            $table->string('country');
+            $table->string('city');
+            $table->string('linkedin');
+            $table->string('instagram');
+            $table->string('facebook');
             $table->timestamps();
         });
     }
