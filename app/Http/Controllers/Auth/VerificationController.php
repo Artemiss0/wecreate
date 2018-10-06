@@ -20,7 +20,7 @@ class VerificationController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/pages.profile';
     /**
      * Create a new controller instance.
      *
