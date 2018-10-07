@@ -23,7 +23,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/pages.profile';
+    protected $redirectTo = '/profile';
     /**
      * Create a new controller instance.
      *

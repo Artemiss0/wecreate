@@ -11,14 +11,21 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('/profile', 'ProfileController@index');
-Route::get('/project', 'ProjectController@index');
+// Pages Routes...
+Route::get('/', 'PagesController@index');
+Route::get('/profile', 'PagesController@profile');
+Route::get('/projects', 'ProjectsController@index');
 
-Auth::routes();
+// Authentication Routes...
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+// Registration Routes...
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
 
-
-Route::post('/project', 'ProjectController@store');
-
+// Project Routes...
+Route::resource('projects','ProjectsController');
+Route::post('/projects', 'ProjectsController@store');
 

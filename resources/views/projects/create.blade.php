@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <h2>Lets add a project</h2>
 
-        {!! Form::open(['action' => 'ProjectController@store', 'method' => 'POST']) !!}
+        {!! Form::open(['action' => 'ProjectsController', 'method' => 'POST']) !!}
         <div class="form-group">
             {{ Form::label('image', 'Image') }}
             {{ Form::file('image') }}

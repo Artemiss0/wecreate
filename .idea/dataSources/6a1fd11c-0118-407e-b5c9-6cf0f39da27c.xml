@@ -1075,13 +1075,13 @@
     </column>
     <column id="266" parent="250" name="text">
       <Position>3</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>mediumtext|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="267" parent="250" name="likes">
       <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1093,13 +1093,13 @@
     </column>
     <column id="269" parent="250" name="tags_id">
       <Position>6</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="270" parent="250" name="user_id">
       <Position>7</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
