@@ -9,7 +9,7 @@
             </div>
             <div class="col-lg-8">
                 <p> Hier gaan we project informatie uitlezen</p>
-                <p> <a href="{{ url('project') }}">Project toevoegen</a> </p>
+                <p> <a href="{{ url('projects') }}">Project toevoegen</a> </p>
 
             </div>
         </div>
