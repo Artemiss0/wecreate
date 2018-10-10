@@ -14,8 +14,9 @@ class ProjectsController extends Controller
      */
     public function index()
     {
+        $title = 'Projects';
         $projects = Project::all();
-        return view('projects.index')->with('projects',$projects);
+        return view('pages.profile', compact('title'))->with('projects',$projects);
     }
 
     /**
@@ -25,7 +26,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.create');
     }
 
     /**
@@ -36,7 +37,22 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:100',
+            'text' => 'required',
+            'image' => 'required'
+        ]);
+
+        //create project
+        $project = new project;
+        $project->image = $request->input('image');
+        $project->title = $request->input('title');
+        $project->text = $request->input('text');
+
+        $project->save();
+        return redirect('/projects')->with('succes', 'Post Created');
+
+//        return $project;
     }
 
     /**

@@ -14,13 +14,19 @@
 <div id="app">
     @include('inc.navbar')
     <main>
-        @yield('header')
         <div class="container">
-            @include('inc.messages')
-            @yield('content')
+            <div class="row">
+                @include('inc.messages')
+                <div class="col-lg-4 profile">
+                    @yield('profile')
+                </div>
+                <div class="col-lg-8 projects">
+                    @yield('projects')
+                </div>
+            </div>
         </div>
     </main>
+    @include('inc.footer')
 </div>
 </body>
-@include('inc.footer')
 </html>

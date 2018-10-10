@@ -6,15 +6,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+        <div class="navbar navbar-inverse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav navbar-right">
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign up') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Sign in') }}</a>
-                    </li>
+                    <a class="nav-link" href="{{ route('login') }}">
+                        <li class="nav-item sign-in">{{ __('Sign in') }}</li>
+                    </a>
                 @else
                     <li class="nav-item">
                         <a class="nav-link" href="/"> Home </a>
@@ -27,7 +27,8 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('logout') }}"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit()"> Logout </a>
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                            Logout </a>
                     </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

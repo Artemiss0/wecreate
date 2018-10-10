@@ -1,5 +1,9 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.profileLayout')
+@section('projects')
+    <h2>Projects</h2>
+    <p> Hier gaan we project informatie uitlezen</p>
+    <p> <a href="{{ url('projects') }}">Project toevoegen</a> </p>
+
     <h2>Projects view</h2>
     @if(count($projects) > 0)
         @foreach($projects as $project)
