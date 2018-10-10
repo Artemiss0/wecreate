@@ -13,7 +13,7 @@
 
 // Pages Routes...
 Route::get('/', 'PagesController@index');
-Route::get('/profile', 'PagesController@profile');
+Route::get('/profile', 'ProjectsController@index');
 Route::get('/projects', 'ProjectsController@index');
 
 // Authentication Routes...

@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
-@section('content')
+@section('header')
     <div class="header">
-        <div class="col-4 text">
-            <h1 class="orangeBk"> Join.create.share</h1>
-            <h3>
-                <a href="{{ route('login') }}"> {{ __('Sign up now >') }} </a>
-            </h3>
+        <div class="col-6 offset-3">
+            <h1 class="orangeBk">Join.create.share</h1>
         </div>
     </div>
+@endsection
+
+@section('content')
+hallo
 @endsection

@@ -1,0 +1,96 @@
+//standard styles
+h1{
+  color: white;
+  font-size: 5em;
+  text-transform: uppercase;
+}
+p{
+  font-size: 1.2em;
+}
+.row{
+  margin: 0;
+}
+//Navbar styles
+.navbar{
+  background-color: $black;
+  padding: 0;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+}
+.navbar a{
+  color: $white;
+}
+li.nav-item {
+  padding: 0.5em 2em;
+}
+.sign-in {
+  background: $orange;
+  border-radius: 1em;
+}
+li.nav-item.sign-in{
+  color: $black;
+}
+//button styles
+.orange-btn {
+  background: $orange;
+  padding: 0.6em 2em;
+  border-radius: 1em;
+  color: white;
+}
+a.orange-btn:hover{
+  color: white;
+  text-decoration: none;
+}
+
+//Header styles
+.header{
+  padding-top: 10em;
+  height: 30em;
+  width: 100%;
+  background: url("/../images/john-jennings-430220-unsplash.jpg");
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+h1.orangeBk {
+  background: orange;
+  width: fit-content;
+}
+//project styles
+.project-text {
+  background: white;
+  padding: 0.5em 2em;
+  width: fit-content;
+  margin: -1.5em auto;
+  position: relative;
+}
+.col-lg-4.project {
+  padding: 2em 0 2em 1em;
+}
+.col-lg-4.project:first-child,.col-lg-4.project:nth-child(4n+4){
+  padding: 2em 0 2em 0;
+}
+.project-image{
+  width: auto;
+  height: 12em;
+  overflow: hidden;
+}
+.project-image img{
+  height: 100%;
+}
+.profile,.projects{
+  background: white;
+  padding-top: 5em;
+}
+//Footer styles
+footer{
+  padding: 4em 0;
+  background-color: $gray;
+  bottom: 0;
+  width: 100%;
+  height: 20em;
+}
+footer a, footer a:hover{
+  color: $black;
+  text-decoration: none;
+}
