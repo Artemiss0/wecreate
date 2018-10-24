@@ -4,6 +4,11 @@ h1{
   font-size: 5em;
   text-transform: uppercase;
 }
+h4, h4:hover{
+  color: $black;
+  text-decoration: none;
+  border: none;
+}
 p{
   font-size: 1.2em;
 }
@@ -81,6 +86,11 @@ h1.orangeBk {
 .profile,.projects{
   background: white;
   padding-top: 5em;
+}
+.image{
+  margin: 0 0 2em 0;
+  padding: 0;
+
 }
 //Footer styles
 footer{
