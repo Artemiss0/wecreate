@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="96ae41bc-e84d-4af2-a3d4-2d6cdadbc979" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
       <change beforePath="" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a1fd11c-0118-407e-b5c9-6cf0f39da27c.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6a1fd11c-0118-407e-b5c9-6cf0f39da27c.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -19,6 +22,9 @@
       <change beforePath="$PROJECT_DIR$/resources/views/pages/profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/profile.blade.php" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/projects/create.blade.php" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/projects/edit.blade.php" />
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,8 +78,13 @@
         <entry file="file://$PROJECT_DIR$/resources/sass/_custom.scss">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="126">
               <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+=======
+            <state relative-caret-position="189">
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
             <state relative-caret-position="189">
               <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
@@ -104,6 +115,7 @@
               <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="32" />
               <folding>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <marker date="1540373962768" expanded="true" signature="9:22" ph="..." />
                 <marker date="1540373962768" expanded="true" signature="33:42" ph="..." />
                 <marker date="1540373962768" expanded="true" signature="126:200" ph="..." />
@@ -117,6 +129,8 @@
                 <marker date="1540373962768" expanded="true" signature="934:958" ph="..." />
                 <marker date="1540373962768" expanded="true" signature="987:1002" ph="..." />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
                 <marker date="1540298643558" expanded="true" signature="9:22" ph="..." />
                 <marker date="1540298643558" expanded="true" signature="33:42" ph="..." />
                 <marker date="1540298643558" expanded="true" signature="126:234" ph="..." />
@@ -129,6 +143,9 @@
                 <marker date="1540298643558" expanded="true" signature="834:902" ph="..." />
                 <marker date="1540298643558" expanded="true" signature="968:992" ph="..." />
                 <marker date="1540298643558" expanded="true" signature="1021:1036" ph="..." />
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
               </folding>
             </state>
@@ -159,6 +176,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/pages/profile.blade.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="84">
               <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
               <folding>
@@ -173,6 +191,8 @@
                 <marker date="1540373962764" expanded="true" signature="746:796" ph="..." />
                 <marker date="1540373962764" expanded="true" signature="906:923" ph="..." />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
             <state relative-caret-position="168">
               <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
               <folding>
@@ -188,6 +208,9 @@
                 <marker date="1540308447294" expanded="true" signature="1229:1244" ph="..." />
                 <marker date="1540308447294" expanded="true" signature="1369:1381" ph="..." />
                 <marker date="1540308447294" expanded="true" signature="1416:1433" ph="..." />
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
               </folding>
             </state>
@@ -439,7 +462,10 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
             </path>
             <path>
               <item name="wecreate" type="b2602c69:ProjectViewProjectNode" />
@@ -447,6 +473,9 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
             </path>
             <path>
@@ -455,7 +484,11 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+=======
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
@@ -466,6 +499,7 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -473,6 +507,8 @@
               <item name="wecreate" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
               <item name="projects" type="2a2b976b:PhpTreeStructureProvider$1" />
@@ -593,7 +629,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="78507000" />
+=======
+    <option name="totallyTimeSpent" value="94829000" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
     <option name="totallyTimeSpent" value="94829000" />
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
@@ -817,6 +857,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="294">
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="32" />
           <folding>
@@ -837,6 +878,10 @@
         <state relative-caret-position="420">
           <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
+        <state relative-caret-position="420">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         </state>
       </provider>
     </entry>
@@ -850,8 +895,13 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="241">
           <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+=======
+        <state relative-caret-position="1218">
+          <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
         <state relative-caret-position="1218">
           <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
@@ -861,6 +911,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/inc/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="504">
           <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
@@ -879,6 +930,10 @@
         <state relative-caret-position="315">
           <caret line="15" column="125" lean-forward="false" selection-start-line="15" selection-start-column="125" selection-end-line="15" selection-end-column="125" />
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
+        <state relative-caret-position="315">
+          <caret line="15" column="125" lean-forward="false" selection-start-line="15" selection-start-column="125" selection-end-line="15" selection-end-column="125" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         </state>
       </provider>
     </entry>
@@ -892,8 +947,13 @@
     <entry file="file://$PROJECT_DIR$/resources/sass/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="147">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="16" selection-end-column="10" />
+=======
+        <state relative-caret-position="294">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="7" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
         <state relative-caret-position="294">
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="7" />
@@ -911,9 +971,12 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2018_10_23_122349_add_image_to_projects.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="420">
           <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="546">
           <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
         </state>
@@ -923,6 +986,9 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         </state>
       </provider>
@@ -930,8 +996,13 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="420">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+=======
+        <state relative-caret-position="546">
+          <caret line="152" column="62" lean-forward="false" selection-start-line="152" selection-start-column="62" selection-end-line="152" selection-end-column="62" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
         <state relative-caret-position="546">
           <caret line="152" column="62" lean-forward="false" selection-start-line="152" selection-start-column="62" selection-end-line="152" selection-end-column="62" />
@@ -942,8 +1013,13 @@
     <entry file="file://$PROJECT_DIR$/resources/views/inc/messages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="441">
           <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+=======
+        <state relative-caret-position="189">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
 =======
         <state relative-caret-position="189">
           <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
@@ -954,9 +1030,12 @@
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="-42">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="50" />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="420">
           <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
           <folding />
@@ -967,9 +1046,12 @@
     <entry file="file://$PROJECT_DIR$/resources/views/projects/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="1218">
           <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="105">
           <caret line="5" column="132" lean-forward="false" selection-start-line="5" selection-start-column="132" selection-end-line="5" selection-end-column="132" />
         </state>
@@ -1022,10 +1104,13 @@
     <entry file="file://$PROJECT_DIR$/resources/views/pages/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="651">
           <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
           <folding />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="84">
           <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
@@ -1040,9 +1125,12 @@
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/profileLayout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="315">
           <caret line="15" column="125" lean-forward="false" selection-start-line="15" selection-start-column="125" selection-end-line="15" selection-end-column="125" />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="147">
           <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding>
@@ -1063,10 +1151,13 @@
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="126">
           <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="504">
           <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
@@ -1080,12 +1171,16 @@
             <marker date="1539181906809" expanded="true" signature="561:570" ph="..." />
             <marker date="1539181906809" expanded="true" signature="623:635" ph="..." />
           </folding>
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="84">
           <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
@@ -1101,6 +1196,8 @@
             <marker date="1540373962764" expanded="true" signature="746:796" ph="..." />
             <marker date="1540373962764" expanded="true" signature="906:923" ph="..." />
 =======
+=======
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
         <state relative-caret-position="168">
           <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding>
@@ -1116,6 +1213,9 @@
             <marker date="1540308447294" expanded="true" signature="1229:1244" ph="..." />
             <marker date="1540308447294" expanded="true" signature="1369:1381" ph="..." />
             <marker date="1540308447294" expanded="true" signature="1416:1433" ph="..." />
+<<<<<<< HEAD
+>>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
+=======
 >>>>>>> da4403ccbc796c83d530b3045e03e28b49b0effa
           </folding>
         </state>
