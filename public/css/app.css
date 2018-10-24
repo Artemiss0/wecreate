@@ -10472,6 +10472,13 @@ h1 {
   text-transform: uppercase;
 }
 
+h4,
+h4:hover {
+  color: #292929;
+  text-decoration: none;
+  border: none;
+}
+
 p {
   font-size: 1.2em;
 }
@@ -10565,6 +10572,11 @@ h1.orangeBk {
 .projects {
   background: white;
   padding-top: 5em;
+}
+
+.image {
+  margin: 0 0 2em 0;
+  padding: 0;
 }
 
 footer {

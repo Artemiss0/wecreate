@@ -6,7 +6,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
@@ -15,8 +14,8 @@
     @include('inc.navbar')
     <main>
         <div class="container">
+            @include('inc.messages')
             <div class="row">
-                @include('inc.messages')
                 <div class="col-lg-4 profile">
                     @yield('profile')
                 </div>
