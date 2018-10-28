@@ -19,8 +19,8 @@ class CreateProjectsTable extends Migration
                 $table->string('title');
                 $table->mediumText('text');
 //                $table->integer('likes');
-//                $table->integer('tags_id');
-//                $table->integer('user_id');
+                $table->integer('tags_id')->nullable();
+                $table->integer('user_id');
                 $table->timestamps();
             });
         }

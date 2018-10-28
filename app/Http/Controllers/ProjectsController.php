@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Tag;
 use App\Project;
+use App\User;
 
 class ProjectsController extends Controller
 {
+    //you can only continue if you are authenticated
+    public function __construct()
+    {
+        $this->middleware('auth',['except' => ['show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +23,11 @@ class ProjectsController extends Controller
      */
     public function index()
     {
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
         $title = 'Projects';
         $projects = Project::all();
-        return view('pages.profile', compact('title'))->with('projects',$projects);
+        return view('pages.profile', compact('title'))->with('projects',$user->projects);
     }
 
     /**
@@ -27,7 +37,8 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        $tags = Tag::all();
+        return view('projects.create')->with('tags',$tags);
     }
 
     /**
@@ -38,10 +49,14 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
+        //die and dump
+//        dd($request);
+
         $this->validate($request, [
             'title' => 'required|max:100',
             'text' => 'required',
-            'image' => 'image|required|max:1999'
+            'image' => 'image|required|max:1999',
+            'tags' => 'nullable'
         ]);
         //handle file upload
         if($request->hasFile('image')){
@@ -64,10 +79,15 @@ class ProjectsController extends Controller
         $project->title = $request->input('title');
         $project->text = $request->input('text');
         $project->image = $fileNameToStore;
+        $project->user_id = auth()->user()->id;
         $project->save();
+
+        $project->tags()->sync($request->tags, false); // the content will be assosiated with this project
+
         return redirect('/projects')->with('success', 'Post Created');
 
-//        return $project;
+
+
     }
 
     /**
@@ -78,8 +98,11 @@ class ProjectsController extends Controller
      */
     public function show($id)
     {
+        $tags = Tag::all();
         $project = Project::find($id);
-        return view('projects.show')->with('project', $project);
+        return view('projects.show')
+            ->with('project', $project)
+            ->with('tags', $tags);
     }
 
     /**
@@ -91,6 +114,11 @@ class ProjectsController extends Controller
     public function edit($id)
     {
         $project = Project::find($id);
+
+        //check for correct user
+        if(auth()->user()->id !== $project->user_id){
+            return redirect('/projects')->with('error', 'Unauthorized page');
+        }
         return view('projects.edit')->with('project', $project);
     }
 
@@ -152,8 +180,13 @@ class ProjectsController extends Controller
             //delete image
             Storage::delete('public/images/'.$project->image);
         }
-        $project->delete();
 
+        //check for correct user
+        if(auth()->user()->id !== $project->user_id){
+            return redirect('/projects')->with('error', 'Unauthorized page');
+        }
+
+        $project->delete();
         return redirect('/projects')->with('success', 'Project Removed');
     }
 }

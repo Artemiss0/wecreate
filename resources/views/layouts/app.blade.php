@@ -13,8 +13,11 @@
 <body>
 <div id="app">
     @include('inc.navbar')
-    <main>
+    <header class="header">
         @yield('header')
+    </header>
+    @include('inc.searchnav')
+    <main>
         <div class="container">
             @include('inc.messages')
             @yield('content')

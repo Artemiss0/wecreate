@@ -17,6 +17,14 @@
             {{ Form::textarea('text', '', ['class' => 'form-control', 'placeholder' => 'text']) }}
         </div>
         <div class="form-group">
+            {{ Form::label('tags', 'Tag') }}
+            <select multiple class="form-control" id="exampleFormControlSelect2" name="tags[]">
+                @foreach($tags as $tag)
+                    <option value="{{ $tag->id }}"> {{ $tag->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             {{ Form::hidden('invisible', 'secret', array('id' => 'invisible_id')) }}
         </div>
 

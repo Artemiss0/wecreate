@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/"> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Discover</a>
+                        <a class="nav-link" href="/discover"> Discover</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/profile"> Profile</a>

@@ -14,7 +14,8 @@
 // Pages Routes...
 Route::get('/', 'PagesController@index');
 Route::get('/profile', 'ProjectsController@index');
-Route::get('/projects', 'ProjectsController@index');
+//Route::get('/projects', 'ProjectsController@index');
+Route::get('/discover', 'PagesController@discover');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -29,3 +30,5 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::resource('projects','ProjectsController');
 Route::post('/projects', 'ProjectsController@store');
 
+// Tags Routes
+Route::resource('tags','TagsController');

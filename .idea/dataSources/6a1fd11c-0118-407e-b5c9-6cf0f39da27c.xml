@@ -1026,71 +1026,71 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="258" parent="249" name="id">
+    <column id="258" parent="249" name="project_id">
       <Position>1</Position>
-      <DataType>int(10) unsigned|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="249" name="projects_id">
+    <column id="259" parent="249" name="tag_id">
       <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="249" name="tags_id">
-      <Position>3</Position>
-      <DataType>varchar(255)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="261" parent="249" name="created_at">
-      <Position>4</Position>
-      <DataType>timestamp|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="262" parent="249" name="updated_at">
-      <Position>5</Position>
-      <DataType>timestamp|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="263" parent="249" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
+    <index id="260" parent="249" name="project_tags_project_id_tag_id_unique">
+      <ColNames>project_id
+tag_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="261" parent="249" name="project_tags_project_id_tag_id_unique">
+      <ColNames>project_id
+tag_id</ColNames>
+      <UnderlyingIndexName>project_tags_project_id_tag_id_unique</UnderlyingIndexName>
     </key>
-    <column id="264" parent="250" name="id">
+    <column id="262" parent="250" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="250" name="title">
+    <column id="263" parent="250" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="250" name="text">
+    <column id="264" parent="250" name="text">
       <Position>3</Position>
       <DataType>mediumtext|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="250" name="created_at">
+    <column id="265" parent="250" name="tags_id">
       <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="250" name="user_id">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="250" name="created_at">
+      <Position>6</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="268" parent="250" name="updated_at">
-      <Position>5</Position>
+      <Position>7</Position>
       <DataType>timestamp|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="269" parent="250" name="image">
-      <Position>6</Position>
+      <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
@@ -1107,7 +1107,7 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="251" name="tag_name">
+    <column id="272" parent="251" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
