@@ -29,6 +29,10 @@ class User extends Authenticatable
     ];
     public function projects(){
         //one to many relationship
-        return $this->hasMany('App\Project');
+        return $this->BelongsToMany('App\Project');
+    }
+    public function favorites()
+    {
+        return $this->belongsToMany(Project::class, 'favorites', 'user_id', 'project_id')->withTimeStamps();
     }
 }

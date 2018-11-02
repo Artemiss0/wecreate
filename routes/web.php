@@ -29,8 +29,9 @@ Route::post('register', 'Auth\RegisterController@register');
 // Project Routes...
 Route::resource('projects','ProjectsController');
 Route::post('/projects', 'ProjectsController@store');
-Route::post('/projects{id}','ProjectsController@like');
-
+Route::post('favorite/{project}', 'ProjectsController@favoriteProject');
+Route::post('unfavorite/{project}', 'ProjectsController@unFavoriteProject');
+//Route::post('/projects{id}','ProjectsController@like');
 // Tags Routes
 Route::resource('tags','TagsController');
 

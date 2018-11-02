@@ -25,6 +25,14 @@
             </select>
         </div>
         <div class="form-group">
+            {{ Form::label('users', 'User') }}
+            <select multiple class="form-control" id="exampleFormControlSelect2" name="tags[]">
+                @foreach($users as $user)
+                    <option value="{{ $user->id }}"> {{ $user->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             {{ Form::hidden('invisible', 'secret', array('id' => 'invisible_id')) }}
         </div>
 

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Tag;
 use App\Project;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectsController extends Controller
 {
@@ -25,8 +26,38 @@ class ProjectsController extends Controller
     {
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
+        $projects = Project::where("user_id","=", $user->id)->get();
         $title = 'Projects';
-        return view('pages.profile', compact('title'))->with('projects',$user->projects);
+
+        return view('pages.profile')
+            ->with('projects',$projects)
+            ->with('title', $title);
+
+    }
+    /**
+     * Favorite a particular post
+     *
+     * @param  Project $project
+     * @return Response
+     */
+    public function favoriteProject(Project $project)
+    {
+        Auth::user()->favorites()->attach($project->id);
+
+        return back();
+    }
+
+    /**
+     * Unfavorite a particular post
+     *
+     * @param  Project $project
+     * @return Response
+     */
+    public function unFavoriteProject(Project $project)
+    {
+        Auth::user()->favorites()->detach($project->id);
+
+        return back();
     }
 
     /**
@@ -37,7 +68,10 @@ class ProjectsController extends Controller
     public function create()
     {
         $tags = Tag::all();
-        return view('projects.create')->with('tags',$tags);
+        $user = User::all();
+        return view('projects.create')
+            ->with('tags',$tags)
+            ->with('users', $user);
     }
 
     /**
@@ -82,12 +116,17 @@ class ProjectsController extends Controller
         $project->save();
 
         $project->tags()->sync($request->tags, false); // the content will be assosiated with this project
+        $project->user()->sync($request->users, false);
 
         return redirect('/projects')->with('success', 'Post Created');
     }
-    public function like($id){
-        $project_id = $id;
-        return  dd($project_id);
+    public function likeProject(Project $project){
+        Auth::user()->likes()->attach($project->id);
+        return back();
+    }
+    public function dislikeProject(Project $project){
+        Auth::user()->likes()->detach($project->id);
+        return back();
     }
 
     /**
@@ -99,11 +138,13 @@ class ProjectsController extends Controller
     public function show($id)
     {
         $tags = Tag::all();
+        $users = User::all();
         $project = Project::find($id);
 //        $project = Project::where('user_id','=',$id)->get();
         return view('projects.show')
             ->with('project', $project)
-            ->with('tags', $tags);
+            ->with('tags', $tags)
+            ->with('user',$users);
     }
 
     /**

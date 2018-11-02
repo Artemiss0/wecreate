@@ -1,4 +1,12 @@
 @extends('layouts.app')
+@section('js')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/like.js')}}"></script>
+@endsection
+@section('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+@endsection
 @section('content')
     <div class="row">
 
@@ -25,15 +33,16 @@
                                 {{$tag->name}}
                             @endforeach
                         </p>
-                        {!! Form::open(['action'=>['ProjectsController@like',$project->id],'method' => 'POST']) !!}
-                        {{Form::hidden('projectid',$project->id)}}
-                        {{Form::submit('like',['class'=>'btn'])}}
-                        {!! Form::close() !!}
-                        <p><b>Views:</b></p>
+
                     </div>
                 @endif
             </div>
-
+            <div class="panel-footer">
+                <favorite
+                        :post={{ $project->id }}
+                                :favorited={{ $project->favorited() ? 'true' : 'false' }}
+                ></favorite>
+            </div>
             <div class="row border-bottom">
                 @if(!Auth::guest())
                     @if(Auth::user()->id == $project->user_id)
