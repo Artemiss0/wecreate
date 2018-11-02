@@ -2,6 +2,9 @@
 @section('header')
 
 @endsection
+@section('subnav')
+    @include('inc.searchnav')
+@endsection
 
 @section('content')
     <div class="row">

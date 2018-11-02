@@ -25,7 +25,10 @@
                                 {{$tag->name}}
                             @endforeach
                         </p>
-                        <p><b>Likes:</b></p>
+                        {!! Form::open(['action'=>['ProjectsController@like',$project->id],'method' => 'POST']) !!}
+                        {{Form::hidden('projectid',$project->id)}}
+                        {{Form::submit('like',['class'=>'btn'])}}
+                        {!! Form::close() !!}
                         <p><b>Views:</b></p>
                     </div>
                 @endif

@@ -16,7 +16,7 @@
     <header class="header">
         @yield('header')
     </header>
-    @include('inc.searchnav')
+@yield('subnav')
     <main>
         <div class="container">
             @include('inc.messages')

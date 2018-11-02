@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+//use Illuminate\Support\Facades\Storage;
 use App\Tag;
 use App\Project;
 use App\User;
@@ -26,7 +26,6 @@ class ProjectsController extends Controller
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
         $title = 'Projects';
-        $projects = Project::all();
         return view('pages.profile', compact('title'))->with('projects',$user->projects);
     }
 
@@ -85,9 +84,10 @@ class ProjectsController extends Controller
         $project->tags()->sync($request->tags, false); // the content will be assosiated with this project
 
         return redirect('/projects')->with('success', 'Post Created');
-
-
-
+    }
+    public function like($id){
+        $project_id = $id;
+        return  dd($project_id);
     }
 
     /**
@@ -100,6 +100,7 @@ class ProjectsController extends Controller
     {
         $tags = Tag::all();
         $project = Project::find($id);
+//        $project = Project::where('user_id','=',$id)->get();
         return view('projects.show')
             ->with('project', $project)
             ->with('tags', $tags);
@@ -134,7 +135,7 @@ class ProjectsController extends Controller
         $this->validate($request, [
             'title' => 'required|max:100',
             'text' => 'required',
-            'image' => 'nullable'
+            'image' => 'image'
         ]);
 
         if($request->hasFile('image')){
@@ -148,7 +149,6 @@ class ProjectsController extends Controller
             $fileNameToStore = $filename . '_' . time() . '.' . $exstension;
             //upload image
             $path = $request->file('image')->storeAs('public/images', $fileNameToStore);
-
         }
 
         //create project

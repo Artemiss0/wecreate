@@ -29,6 +29,15 @@ Route::post('register', 'Auth\RegisterController@register');
 // Project Routes...
 Route::resource('projects','ProjectsController');
 Route::post('/projects', 'ProjectsController@store');
+Route::post('/projects{id}','ProjectsController@like');
 
 // Tags Routes
 Route::resource('tags','TagsController');
+
+//Admin Route
+  Route::prefix('admin')->group(function (){
+      Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
+      Route::post('/login','Auth\AdminLoginController@login')->name('admin.login.submit');
+      Route::get('/', 'AdminController@index')->name('admin.index');
+  });
+

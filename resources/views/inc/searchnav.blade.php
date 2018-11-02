@@ -7,15 +7,20 @@
                         please log in first
                     </li>
                 @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Filter 1 </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Filter 2 </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Filter 3 </a>
-                    </li>
+                    {!! Form::open(['action' => 'PagesController@discover', 'method' => 'GET']) !!}
+                    <div class="form-group">
+                        {{ Form::label('tags', 'Tag') }}
+                        <select class="form-control" id="exampleFormControlSelect1" name="tags">
+                            <option value="" selected disabled>Please select</option>
+                            @foreach($tags as $tag)
+                                <option value="{{ $tag->id }}"> {{ $tag->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        {{ Form::submit('search') }}
+                    </div>
+                    {!! Form::close() !!}
                 @endguest
             </ul>
         </div>
