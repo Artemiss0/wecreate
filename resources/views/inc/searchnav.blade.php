@@ -8,6 +8,7 @@
                     </li>
                 @else
                     {!! Form::open(['action' => 'PagesController@discover', 'method' => 'GET']) !!}
+                    @csrf
                     <div class="form-group">
                         {{ Form::label('tags', 'Tag') }}
                         <select class="form-control" id="exampleFormControlSelect1" name="tags">

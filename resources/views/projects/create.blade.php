@@ -4,6 +4,7 @@
         <h2>Lets add a project</h2>
 
         {!! Form::open(['action' => 'ProjectsController@store', 'method' => 'POST', 'enctype'=>'multipart/form-data']) !!}
+        @csrf
         <div class="form-group">
             {{ Form::label('image', 'Image',['class' => 'control-label']) }}
             {{ Form::file('image') }}

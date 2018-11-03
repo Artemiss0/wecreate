@@ -8,32 +8,55 @@
 
         <div class="navbar navbar-inverse" id="navbarSupportedContent">
             <ul class="nav navbar-nav navbar-right">
-                @guest
+                {{--Navbar visible for guests--}}
+                @if(Auth::guest())
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"> Home </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign up') }}</a>
                     </li>
                     <a class="nav-link" href="{{ route('login') }}">
                         <li class="nav-item sign-in">{{ __('Sign in') }}</li>
                     </a>
-                @else
+                @endif
+                {{--Navbar visible for users--}}
+                @if(!Auth::guest() && !Auth::guard('admin')->check())
                     <li class="nav-item">
                         <a class="nav-link" href="/"> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/discover"> Discover</a>
+                        <a class="nav-link" href="{{route('discover')}}"> Discover</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/profile"> Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('logout') }}"
+                        <a href="{{ route('logout') }}" class="nav-link"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
                             Logout </a>
                     </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                @endguest
+                @endif
+                {{--Navbar visible for admins--}}
+                @if(Auth::guard('admin')->check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('tags.index')}}">Add Tags</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.projects')}}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}" class="nav-link"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                            Logout </a>
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @endif
             </ul>
         </div>
     </div>

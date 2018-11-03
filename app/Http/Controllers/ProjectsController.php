@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Favorite;
 use Illuminate\Http\Request;
 //use Illuminate\Support\Facades\Storage;
 use App\Tag;
@@ -34,16 +35,17 @@ class ProjectsController extends Controller
             ->with('title', $title);
 
     }
+
     /**
      * Favorite a particular post
      *
      * @param  Project $project
      * @return Response
      */
+
     public function favoriteProject(Project $project)
     {
         Auth::user()->favorites()->attach($project->id);
-
         return back();
     }
 
@@ -53,10 +55,10 @@ class ProjectsController extends Controller
      * @param  Project $project
      * @return Response
      */
+
     public function unFavoriteProject(Project $project)
     {
         Auth::user()->favorites()->detach($project->id);
-
         return back();
     }
 
@@ -137,14 +139,19 @@ class ProjectsController extends Controller
      */
     public function show($id)
     {
+
         $tags = Tag::all();
         $users = User::all();
         $project = Project::find($id);
-//        $project = Project::where('user_id','=',$id)->get();
+        $favorites = Favorite::where("project_id","=", $project->id)->get();
+        $userFavorites = Favorite::where('user_id', '=', $project->user_id)->get();
+
         return view('projects.show')
             ->with('project', $project)
             ->with('tags', $tags)
-            ->with('user',$users);
+            ->with('user',$users)
+            ->with('favorites',$favorites)
+            ->with('userFavorites',$userFavorites);
     }
 
     /**
@@ -153,6 +160,9 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function comment(){
+
+    }
     public function edit($id)
     {
         $project = Project::find($id);

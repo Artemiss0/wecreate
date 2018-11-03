@@ -12,10 +12,9 @@
 */
 
 // Pages Routes...
-Route::get('/', 'PagesController@index');
-Route::get('/profile', 'ProjectsController@index');
-//Route::get('/projects', 'ProjectsController@index');
-Route::get('/discover', 'PagesController@discover');
+Route::get('/', 'PagesController@index')->name('home');
+Route::get('/profile', 'ProjectsController@index')->name('profile');
+Route::get('/discover', 'PagesController@discover')->name('discover');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -29,16 +28,17 @@ Route::post('register', 'Auth\RegisterController@register');
 // Project Routes...
 Route::resource('projects','ProjectsController');
 Route::post('/projects', 'ProjectsController@store');
+
+//Favorite Routes...
 Route::post('favorite/{project}', 'ProjectsController@favoriteProject');
 Route::post('unfavorite/{project}', 'ProjectsController@unFavoriteProject');
-//Route::post('/projects{id}','ProjectsController@like');
-// Tags Routes
-Route::resource('tags','TagsController');
 
-//Admin Route
+//Admin Route...
   Route::prefix('admin')->group(function (){
       Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
       Route::post('/login','Auth\AdminLoginController@login')->name('admin.login.submit');
+      Route::resource('/tags','TagsController');
+      Route::get('/project','AdminController@projects')->name('admin.projects');
       Route::get('/', 'AdminController@index')->name('admin.index');
   });
 

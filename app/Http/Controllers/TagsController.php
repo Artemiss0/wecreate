@@ -7,6 +7,10 @@ use App\Tag;
 
 class TagsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +48,7 @@ class TagsController extends Controller
         $tag = new tag;
         $tag->name = $request->input('name');
         $tag->save();
-        return redirect('/tags')->with('success', 'tag Created');
+        return redirect('admin/tags')->with('success', 'tag Created');
     }
 
     /**
