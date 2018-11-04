@@ -10523,6 +10523,11 @@ a.orange-btn:hover {
   text-decoration: none;
 }
 
+ul.nav.navbar-nav.searchnav li {
+  display: inline-block;
+  padding: 1em 0;
+}
+
 .header {
   padding-top: 10em;
   height: 30em;

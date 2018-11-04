@@ -12,9 +12,8 @@
 */
 
 // Pages Routes...
-Route::get('/', 'PagesController@index')->name('home');
+Route::get('/', 'PagesController@index')->name('index');
 Route::get('/profile', 'ProjectsController@index')->name('profile');
-Route::get('/discover', 'PagesController@discover')->name('discover');
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -28,6 +27,7 @@ Route::post('register', 'Auth\RegisterController@register');
 // Project Routes...
 Route::resource('projects','ProjectsController');
 Route::post('/projects', 'ProjectsController@store');
+Route::post('/projects/comments', 'ProjectsController@comments');
 
 //Favorite Routes...
 Route::post('favorite/{project}', 'ProjectsController@favoriteProject');
@@ -41,4 +41,7 @@ Route::post('unfavorite/{project}', 'ProjectsController@unFavoriteProject');
       Route::get('/project','AdminController@projects')->name('admin.projects');
       Route::get('/', 'AdminController@index')->name('admin.index');
   });
+
+  //user Route
+Route::resource('user','UserController');
 

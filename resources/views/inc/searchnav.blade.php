@@ -1,26 +1,26 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <div class="navbar navbar-inverse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav searchnav">
                 @guest
                     <li class="nav-item">
                         please log in first
                     </li>
                 @else
-                    {!! Form::open(['action' => 'PagesController@discover', 'method' => 'GET']) !!}
+                    {!! Form::open(['action' => 'PagesController@index', 'method' => 'GET']) !!}
                     @csrf
-                    <div class="form-group">
-                        {{ Form::label('tags', 'Tag') }}
+                    {{ Form::label('tags', 'Tag') }}
+                    <li>
                         <select class="form-control" id="exampleFormControlSelect1" name="tags">
-                            <option value="" selected disabled>Please select</option>
+                            <option value="0" selected disabled>Please select</option>
                             @foreach($tags as $tag)
                                 <option value="{{ $tag->id }}"> {{ $tag->name }}</option>
                             @endforeach
                         </select>
-                    </div>
-                    <div class="form-group">
+                    </li>
+                    <li>
                         {{ Form::submit('search') }}
-                    </div>
+                    </li>
                     {!! Form::close() !!}
                 @endguest
             </ul>

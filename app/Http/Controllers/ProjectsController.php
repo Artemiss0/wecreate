@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\comment;
 use App\Favorite;
 use Illuminate\Http\Request;
 //use Illuminate\Support\Facades\Storage;
@@ -137,22 +138,36 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request ,$id)
     {
-
         $tags = Tag::all();
-        $users = User::all();
         $project = Project::find($id);
+        $comments = Comment::where('project_id', '=', $project->id)->get();
+        $users = User::where('id','=', $project->id)->get();
         $favorites = Favorite::where("project_id","=", $project->id)->get();
         $userFavorites = Favorite::where('user_id', '=', $project->user_id)->get();
-
         return view('projects.show')
             ->with('project', $project)
             ->with('tags', $tags)
-            ->with('user',$users)
+            ->with('users',$users)
             ->with('favorites',$favorites)
-            ->with('userFavorites',$userFavorites);
+            ->with('userFavorites',$userFavorites)
+            ->with('comments', $comments);
     }
+    public function comments(Request $request){
+        $this->validate($request, [
+            'comment' => 'required|max:100',
+        ]);
+        $comment = new comment;
+        $comment->body = $request->input('comment');
+        $comment->user_id = auth()->user()->id;
+        $comment->project_id = $request->input('project_id');
+        $comment->save();
+
+        return back()->with('success','You added a comment');
+
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -160,18 +175,20 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function comment(){
-
-    }
     public function edit($id)
     {
         $project = Project::find($id);
+        $tags = Tag::all();
+        $users = User::all();
 
         //check for correct user
         if(auth()->user()->id !== $project->user_id){
             return redirect('/projects')->with('error', 'Unauthorized page');
         }
-        return view('projects.edit')->with('project', $project);
+        return view('projects.edit')
+            ->with('project', $project)
+            ->with('tags', $tags)
+            ->with('users',$users);
     }
 
     /**
@@ -211,6 +228,10 @@ class ProjectsController extends Controller
         $project->text = $request->input('text');
 
         $project->save();
+
+        $project->tags()->sync($request->tags, false); // the content will be assosiated with this project
+        $project->user()->sync($request->users, false);
+
         return redirect('/projects')->with('success', 'Project updated');
     }
 

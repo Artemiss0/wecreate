@@ -1,29 +1,31 @@
 @extends('layouts.profileLayout')
 @section('profile')
+    @if(!Auth::guest())
     <div class="d-flex justify-content-between border-bottom">
         <h3>{{ Auth::user()->name . ' ' . Auth::user()->surname }}</h3>
     </div>
     <div class="border-bottom">
         <p><b>Email: </b>{{ Auth::user()->email}}</p>
-        <p><b>Phone: </b> - </p>
-        <p><b>City: </b> - </p>
-        <p><b>Country: </b> - </p>
+        <p><b>Phone: </b>{{ Auth::user()->phone}} </p>
+        <p><b>City: </b> {{ Auth::user()->city}} </p>
+        <p><b>Country: </b> {{ Auth::user()->country}} </p>
     </div>
     <div class="border-bottom">
         <p><b>About me</b></p>
-        <p> - </p>
+        <p> {{ Auth::user()->about}} </p>
     </div>
     <div class="border-bottom">
         <p><b>Occupation</b></p>
-        <p> - </p>
+        <p> {{ Auth::user()->occupation}} </p>
     </div>
     <div class="border-bottom">
         <p><b>On the web</b></p>
-        <p> - </p>
+        <p> {{ Auth::user()->website}} </p>
     </div>
+    @endif
 
 
-    <p><a class="orange-btn" href=""> Edit user information</a></p>
+    <p><a class="orange-btn" href="/user/{{Auth::user()->id}}/edit"> Edit user information</a></p>
 @endsection
 
 @section('projects')

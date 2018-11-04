@@ -26,7 +26,7 @@
             </select>
         </div>
         <div class="form-group">
-            {{ Form::label('users', 'User') }}
+            {{ Form::label('users', 'UserController') }}
             <select multiple class="form-control" id="exampleFormControlSelect2" name="tags[]">
                 @foreach($users as $user)
                     <option value="{{ $user->id }}"> {{ $user->name }}</option>

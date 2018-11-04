@@ -35,4 +35,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Project::class, 'favorites', 'user_id', 'project_id')->withTimeStamps();
     }
+    public function userInfo(){
+        return $this->hasOne('App\UserInfo');
+    }
 }

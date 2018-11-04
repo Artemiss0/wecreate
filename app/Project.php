@@ -26,4 +26,7 @@ class Project extends Model
             ->where('project_id', $this->id)
             ->first();
     }
+    public function comment(){
+        return $this->hasMany('App\Comment');
+    }
 }

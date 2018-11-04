@@ -11,7 +11,7 @@
                 {{--Navbar visible for guests--}}
                 @if(Auth::guest())
                     <li class="nav-item">
-                        <a class="nav-link" href="/"> Home </a>
+                        <a class="nav-link" href="{{route('index')}}"> Discover </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Sign up') }}</a>
@@ -23,13 +23,10 @@
                 {{--Navbar visible for users--}}
                 @if(!Auth::guest() && !Auth::guard('admin')->check())
                     <li class="nav-item">
-                        <a class="nav-link" href="/"> Home </a>
+                        <a class="nav-link" href="{{route('index')}}"> Discover </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('discover')}}"> Discover</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/profile"> Profile</a>
+                        <a class="nav-link" href="{{route('profile')}}"> Profile</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('logout') }}" class="nav-link"

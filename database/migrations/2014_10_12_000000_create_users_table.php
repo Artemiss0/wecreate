@@ -19,6 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('surname');
             $table->string('email');
             $table->string('password');
+
+            $table->integer('phone')->nullable();
+            $table->string('city')->nullable();
+            $table->string('country')->nullable();
+            $table->string('about')->nullable();
+            $table->string('occupation')->nullable();
+            $table->string('website')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

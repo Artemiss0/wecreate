@@ -46,7 +46,11 @@ a.orange-btn:hover{
   color: white;
   text-decoration: none;
 }
-
+//Searchbar styles
+ul.nav.navbar-nav.searchnav li{
+  display: inline-block;
+  padding: 1em 0;
+}
 //Header styles
 .header{
   padding-top: 10em;

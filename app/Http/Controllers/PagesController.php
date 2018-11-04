@@ -3,30 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Tag;
+use App\User;
 use Illuminate\Http\Request;
 use App\Project;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['discover', 'index']]);
+        $this->middleware('auth', ['except' => ['index']]);
     }
 
-    public function index()
-    {
-        $title = 'Homepage';
-        return view('pages.index', compact('title'));
-    }
-
-    public function profile()
-    {
-        $title = 'Profile';
-        return view('pages.profile', compact('title'));
-    }
-
-    public function discover(Request $request)
+    public function index(Request $request)
     {
         $tags = Tag::all();
         $projects = Project::all();
@@ -42,9 +32,16 @@ class PagesController extends Controller
                 ->get();
         }
 
-        return view('pages.discover')
+        return view('pages.index')
             ->with('projects', $projects)
             ->with('title', $title)
             ->with('tags', $tags);
+    }
+
+    public function profile()
+    {
+        $title = 'Profile';
+        return view('pages.profile')
+            ->with('title', $title);
     }
 }
