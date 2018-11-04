@@ -16,7 +16,6 @@
             <div class="d-flex flex-row">
                 <div class="p-2">#</div>
                 <div class="p-2">Title</div>
-                <div class="p-2">Edit</div>
                 <div class="p-2">Delete</div>
             </div>
         </div>
@@ -25,8 +24,12 @@
                 <div class="d-flex flex-row">
                     <div class="p-2">{{$project->id}}</div>
                     <div class="p-2">{{$project->title}}</div>
-                    <div class="p-2">Edit</div>
-                    <div class="p-2">Delete</div>
+                    {!!Form::open(['action'=>['ProjectsController@destroy',$project->id], 'method' => 'POST']) !!}
+                    @csrf
+                    {{Form::hidden('_method', 'DELETE')}}
+                    <i class="fas fa-trash-alt"></i>
+                    {{Form::submit('Delete',['class'=> 'delete'])}}
+                    {!! Form::close() !!}
                 </div>
             </div>
         @endforeach

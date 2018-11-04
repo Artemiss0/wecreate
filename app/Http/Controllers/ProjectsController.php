@@ -11,6 +11,7 @@ use App\Project;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectsController extends Controller
 {
@@ -141,11 +142,14 @@ class ProjectsController extends Controller
      */
     public function show($id)
     {
+        $userFavorites = 0;
+        if(!Auth::guest()){
+            $user_id = auth()->user()->id;
+            $userFavorites = Favorite::where('user_id', '=', $user_id)->get();
+        }
         $project = Project::find($id);
         $comments = Comment::where('project_id', '=', $project->id)->get();
         $favorites = Favorite::where("project_id","=", $project->id)->get();
-        $userFavorites = Favorite::where('user_id', '=', $project->user_id)->get();
-
         $title = 'Project';
         return view('projects.show')
             ->with('project', $project)
