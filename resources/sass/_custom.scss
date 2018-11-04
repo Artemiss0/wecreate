@@ -112,3 +112,39 @@ footer a, footer a:hover{
   color: $black;
   text-decoration: none;
 }
+//Overige Styles
+.border-bottom.editlinks {
+  display: flex;
+}
+.editlinks a, .editlinks a:hover {
+  color: $black;
+  text-decoration: none;
+  font-style: unset;
+  padding: 0 2em 0.9em 0;
+}
+input.delete {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 2em 0.9em 0;
+}
+.heart a {
+  padding: 0.5em 0.9em;
+  display: block;
+  background: orange;
+  width: fit-content;
+  border-radius: 0.2em;
+  margin-top: 0.8em;
+  color: white;
+}
+a.goback {
+  color: white;
+  display: block;
+  background: orange;
+  width: fit-content;
+  padding: 1em 3em;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}

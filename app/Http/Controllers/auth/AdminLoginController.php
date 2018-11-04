@@ -15,10 +15,13 @@ class AdminLoginController extends Controller
     }
 
     public function showLoginForm(){
-        return view('auth.adminLogin');
+        $title = 'login';
+        return view('auth.adminLogin')
+            ->with('title',$title);
 
     }
     public function login(Request $request){
+
         //validate form data
         $this->validate($request, [
             'email' => 'required|email',
@@ -33,10 +36,11 @@ class AdminLoginController extends Controller
         //Attempt to login
         if (Auth::guard('admin')->attempt($credentials, $request->remember)){
             // if succesfull redirect to admin page
-            return redirect()->intended(route('admin.index'));
+            return redirect()
+                ->intended(route('admin.index'));
         }
-
         //if unsuccessfull redirect loginform
-        return redirect()->back()->withInput($request->only('email'));
+        return redirect()->back()
+            ->withInput($request->only('email'));
     }
 }

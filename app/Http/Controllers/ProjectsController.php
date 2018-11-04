@@ -10,6 +10,7 @@ use App\Tag;
 use App\Project;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProjectsController extends Controller
 {
@@ -138,21 +139,20 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request ,$id)
+    public function show($id)
     {
-        $tags = Tag::all();
         $project = Project::find($id);
         $comments = Comment::where('project_id', '=', $project->id)->get();
-        $users = User::where('id','=', $project->id)->get();
         $favorites = Favorite::where("project_id","=", $project->id)->get();
         $userFavorites = Favorite::where('user_id', '=', $project->user_id)->get();
+
+        $title = 'Project';
         return view('projects.show')
             ->with('project', $project)
-            ->with('tags', $tags)
-            ->with('users',$users)
             ->with('favorites',$favorites)
             ->with('userFavorites',$userFavorites)
-            ->with('comments', $comments);
+            ->with('comments', $comments)
+            ->with('title', $title);
     }
     public function comments(Request $request){
         $this->validate($request, [

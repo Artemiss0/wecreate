@@ -5,7 +5,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <a href="{{ URL::previous() }}"> < Go back </a>
+            <a href="{{ URL::previous() }}" class="goback"> < Go back </a>
         </div>
         <div class="col-lg-8 projects">
             <div class="col-lg-12 image">
@@ -22,31 +22,26 @@
                 @if(!Auth::guest())
                     <div class="col-lg-12">
                         <p class="border-bottom">
-                            @foreach($users as $user)
-                                <b>{{$user->name . ' ' . $user->surname}}</b>
-                            @endforeach
-                        </p>
-                        <p class="border-bottom">
                             <b>{{$project->title}}</b>
                             <br>
-                            @foreach($tags as $tag)
-                                {{$tag->name . ','}}
-                            @endforeach
-                            <br>
+                            <i class="fas fa-heart"></i>
                             {{$favorites->count()}}
                         </p>
-                        <p class="border-bottom">
-                            @if(Auth::user()->id == $project->user_id)
-                                <a href="/projects/{{$project->id}}/edit"> Edit Project</a>
+                        @if(Auth::user()->id == $project->user_id)
+                            <div class="border-bottom editlinks">
+
+                                <a href="/projects/{{$project->id}}/edit"> <i class="fas fa-edit"></i> Edit Project</a>
                                 <br>
                                 {!!Form::open(['action'=>['ProjectsController@destroy',$project->id], 'method' => 'POST']) !!}
                                 @csrf
                                 {{Form::hidden('_method', 'DELETE')}}
-                                {{Form::submit('delete',['class'=> ''])}}
+                                <i class="fas fa-trash-alt"></i>
+                                {{Form::submit('Delete',['class'=> 'delete'])}}
                                 {!! Form::close() !!}
-                            @endif
-                        </p>
-                        <p>
+
+                            </div>
+                        @endif
+                        <p class="heart">
                             <favorite
                                     :post={{ $project->id }}
                                             :favorited={{ $project->favorited() ? 'true' : 'false' }}

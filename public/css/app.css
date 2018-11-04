@@ -10603,3 +10603,50 @@ footer a:hover {
   text-decoration: none;
 }
 
+.border-bottom.editlinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.editlinks a,
+.editlinks a:hover {
+  color: #292929;
+  text-decoration: none;
+  font-style: unset;
+  padding: 0 2em 0.9em 0;
+}
+
+input.delete {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 2em 0.9em 0;
+}
+
+.heart a {
+  padding: 0.5em 0.9em;
+  display: block;
+  background: orange;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.2em;
+  margin-top: 0.8em;
+  color: white;
+}
+
+a.goback {
+  color: white;
+  display: block;
+  background: orange;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1em 3em;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+

@@ -18,8 +18,11 @@ class TagsController extends Controller
      */
     public function index()
     {
-        //
-        return view('tags.index');
+        $tags = Tag::all();
+        $title = 'Tags';
+        return view('tags.index')
+            ->with('tags', $tags)
+            ->with('title', $title);
     }
 
     /**
@@ -48,7 +51,8 @@ class TagsController extends Controller
         $tag = new tag;
         $tag->name = $request->input('name');
         $tag->save();
-        return redirect('admin/tags')->with('success', 'tag Created');
+        return redirect('admin/tags')
+            ->with('success', 'tag Created');
     }
 
     /**
